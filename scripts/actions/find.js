@@ -9,17 +9,12 @@
 const isItThere = (arrOfStrings, toFind) => {
   let exists = false;
   for (let value of arrOfStrings) {
-    if (toFind === value) {
-      exists = true;
-      break;
+    if (value === toFind ) {
+      return true;
     }
-
-
-      
   }
   return exists;
 };
-
 
 
 
@@ -81,16 +76,15 @@ const findValueHandler = () => {
   }
 
   const didFind = isItThere(inputsArray, toFind);
-  // console.log('didFind:', typeof didFind, '\n', didFind);
+  console.log('didFind:', typeof didFind, '\n', didFind);
 
   if (!didFind) {
-    alert(`did not find: \n${toFind}`);
+    alert(`did not find, please try again: \n${toFind}`);
     found = null;
     return;
   }
 
   found = toFind;
-
   console.log('found (after):', typeof found, '\n', found);
 
   displayFoundHandler();
