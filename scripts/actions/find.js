@@ -81,7 +81,7 @@ const findValueHandler = () => {
   }
 
   const didFind = isItThere(inputsArray, toFind);
-  console.log('didFind:', typeof didFind, '\n', didFind);
+  // console.log('didFind:', typeof didFind, '\n', didFind);
 
   if (!didFind) {
     alert(`did not find: \n${toFind}`);
